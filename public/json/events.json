@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"idCategory": 1,
+		"name": "Lolapalooza",
+		"value": 500,
+		"stock": 3000,
+		"img": "lolapalooza.png"
+	},
+	{
+		"id": 2,
+		"idCategory": 1,
+		"name": "Museo de Cuenca",
+		"value": 120,
+		"stock": 5000,
+		"img": "museum.jpeg"
+	}
+]
