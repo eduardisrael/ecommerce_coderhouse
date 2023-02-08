@@ -10,17 +10,20 @@ export default function ItemListContainer() {
 	const { darkMode } = useDarkModeContext();
 	console.log(darkMode);
 	useEffect(() => {
+		console.log("------", idCategory);
 		if (idCategory) {
-			fetch("./json/events.json")
+			fetch("../json/events.json")
 				.then((response) => response.json())
-				.then((events) => {
-					console.log(events);
+				.then((items) => {
+					const events = items.filter(
+						(evt) => evt.idCategory === parseInt(idCategory)
+					);
 					const eventsList = ItemList({ events }); //Array de productos en JSX
 					console.log(eventsList);
 					setEvents(eventsList);
 				});
 		} else {
-			fetch("./json/events.json")
+			fetch("../json/events.json")
 				.then((response) => response.json())
 				.then((events) => {
 					console.log(events);

@@ -4,7 +4,7 @@ export const ItemCount = ({ initialValue, stock, onAdd }) => {
 	const [count, setCount] = useState(initialValue);
 
 	const plus = () => count < stock && setCount(count + 1);
-	const subtract = () => count > initialValue && setCount(count - 1);
+	const rest = () => count > initialValue && setCount(count - 1);
 	const addCart = () => {
 		onAdd(count);
 		toast(`You add ${count} products to the cart!`);
@@ -12,7 +12,7 @@ export const ItemCount = ({ initialValue, stock, onAdd }) => {
 
 	return (
 		<>
-			<button className="btn btn-light" onClick={() => subtract()}>
+			<button className="btn btn-light" onClick={() => rest()}>
 				-
 			</button>
 			{count}

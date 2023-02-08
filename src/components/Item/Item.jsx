@@ -11,10 +11,9 @@ const Item = ({ item }) => {
 					alt="..."
 				/>
 				<div className="card-body">
-					<h5 className="card-title">
-						{item.name} {item.model}
-					</h5>
-					<p className="card-text">{item.brand}</p>
+					<h5 className="card-title">{item.name}</h5>
+					<p className="card-text">{item.description}</p>
+					<p className="card-text">{item.organizer}</p>
 					<p className="card-text">
 						$ {new Intl.NumberFormat("de-DE").format(item.value)}
 					</p>

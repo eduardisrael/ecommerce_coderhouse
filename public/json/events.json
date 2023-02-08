@@ -1,22 +1,42 @@
 [
 	{
 		"id": 1,
-		"idCategory": 1,
+		"idCategory": 2,
 		"name": "Lolapalooza",
 		"value": 500,
-		"stock": 3000,
+		"stock": 2300,
 		"img": "lolapalooza.png",
-		"brand": "Taquilla Live",
-		"model": "test"
+		"organizer": "Taquilla Live",
+		"description": "Festival de Musica"
 	},
 	{
-		"id": 2,
+		"id": 3,
+		"idCategory": 3,
+		"name": "Workshop - Front End",
+		"value": 10,
+		"stock": 112,
+		"img": "coderhouse.jpeg",
+		"description": "Guia en React",
+		"organizer": "Coderhouse"
+	},
+	{
+		"id": 4,
 		"idCategory": 1,
+		"name": "Foo Fighters",
+		"value": 52,
+		"stock": 10,
+		"img": "foo.jpg",
+		"description": "Tour 2023",
+		"organizer": "Ticketmaster"
+	},
+	{
+		"id": 5,
+		"idCategory": 4,
 		"name": "Museo de Cuenca",
-		"value": 120,
-		"stock": 5000,
+		"value": 30,
+		"stock": 300,
 		"img": "museum.jpeg",
-		"model": "test",
-		"brand": "Taquilla Live"
+		"description": "Museo de Cuenca, Azuay",
+		"organizer": "Alcaldía de Cuenca"
 	}
 ]

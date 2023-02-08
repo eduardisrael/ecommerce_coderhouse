@@ -6,7 +6,8 @@ export const ItemDetailContainer = () => {
 	const [event, setEvent] = useState([]);
 	const { id } = useParams();
 	useEffect(() => {
-		fetch("./json/events.json")
+		console.log("///");
+		fetch("../json/events.json")
 			.then((response) => response.json())
 			.then((events) => {
 				const item = events.find((e) => e.id === parseInt(id));

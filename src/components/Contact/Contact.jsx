@@ -12,7 +12,7 @@ export const Contact = () => {
 		const contact = Object.fromEntries(datForm); //Transforma en un objeto literal
 		console.log(contact);
 		e.target.reset(); //Reseteo el formulario
-		toast.success("Consulta recibida correctamente");
+		toast.success("Done!");
 		navigate("/"); //Redirijo a pagina inicial
 	};
 	return (
@@ -20,7 +20,7 @@ export const Contact = () => {
 			<form onSubmit={consultarFormulario} ref={form}>
 				<div className="mb-3">
 					<label htmlFor="nombre" className="form-label">
-						Nombre y apellido
+						Name and Last Name
 					</label>
 					<input type="text" className="form-control" name="nombre" />
 				</div>
@@ -32,13 +32,13 @@ export const Contact = () => {
 				</div>
 				<div className="mb-3">
 					<label htmlFor="celular" className="form-label">
-						Numero telefonico
+						Number
 					</label>
 					<input type="number" className="form-control" name="celular" />
 				</div>
 				<div className="mb-3">
 					<label htmlFor="consulta" className="form-label">
-						Consulta
+						Message
 					</label>
 					<textarea
 						className="form-control"
@@ -49,7 +49,7 @@ export const Contact = () => {
 				</div>
 
 				<button type="submit" className="btn btn-primary">
-					Enviar
+					Send
 				</button>
 			</form>
 		</div>

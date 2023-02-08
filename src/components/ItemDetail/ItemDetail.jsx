@@ -1,6 +1,8 @@
 import { ItemCount } from "../ItemCount/ItemCount";
 export const ItemDetail = ({ item }) => {
 	const onAdd = (quantity) => {
+		console.log("-----");
+
 		console.log(quantity);
 		console.log(item);
 	};
@@ -16,10 +18,9 @@ export const ItemDetail = ({ item }) => {
 			</div>
 			<div className="col-md-8">
 				<div className="card-body">
-					<h5 className="card-title">
-						{item.name} {item.model}
-					</h5>
-					<p className="card-text">Brand: {item.brand}</p>
+					<h5 className="card-title">{item.name}</h5>
+					<p className="card-text">{item.description}</p>
+					<p className="card-text">organizer: {item.organizer}</p>
 					<p className="card-text">
 						value: ${new Intl.NumberFormat("de-DE").format(item.value)}
 					</p>

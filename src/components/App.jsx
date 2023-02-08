@@ -24,10 +24,10 @@ function App() {
 						<Route path="/" element={<ItemListContainer />} />
 						<Route path="/item/:id" element={<ItemDetailContainer />} />
 						<Route
-							path="/category/:categoryId"
+							path="/category/:idCategory"
 							element={<ItemListContainer />}
 						/>
-						<Route path="/contacto" element={<Contact />} />
+						<Route path="/contact" element={<Contact />} />
 					</Routes>
 					<ToastContainer />
 				</DarkModeProvider>
