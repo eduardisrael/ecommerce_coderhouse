@@ -1,15 +1,37 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import "./App.css";
+import "react-toastify/dist/ReactToastify.css";
+
 import ItemListContainer from "./ItemListContainer/ItemListContainer";
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { ToastContainer } from "react-toastify";
+
 import Navbar from "./Navbar/Navbar";
+import { ItemDetailContainer } from "./ItemDetailContainer/ItemDetailContainer";
+import { Contact } from "./Contact/Contact";
+
+import { DarkModeProvider } from "../context/DarkModeContext";
 
 function App() {
 	return (
 		<>
-			<Navbar />
-			<div className="container">
-				<ItemListContainer></ItemListContainer>
-			</div>
+			<BrowserRouter>
+				<DarkModeProvider>
+					<Navbar />
+					<Routes>
+						<Route path="/" element={<ItemListContainer />} />
+						<Route path="/item/:id" element={<ItemDetailContainer />} />
+						<Route
+							path="/category/:categoryId"
+							element={<ItemListContainer />}
+						/>
+						<Route path="/contacto" element={<Contact />} />
+					</Routes>
+					<ToastContainer />
+				</DarkModeProvider>
+			</BrowserRouter>
 		</>
 	);
 }

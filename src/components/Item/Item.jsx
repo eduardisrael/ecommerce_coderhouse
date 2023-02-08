@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Item = ({ item }) => {
 	return (
@@ -10,11 +11,18 @@ const Item = ({ item }) => {
 					alt="..."
 				/>
 				<div className="card-body">
-					<h5 className="card-title">{item.nombre}</h5>
-					<p className="card-text">{item.name}</p>
-					<a href="#" className="btn btn-primary">
-						Details
-					</a>
+					<h5 className="card-title">
+						{item.name} {item.model}
+					</h5>
+					<p className="card-text">{item.brand}</p>
+					<p className="card-text">
+						$ {new Intl.NumberFormat("de-DE").format(item.value)}
+					</p>
+					<button className="btn btn-dark">
+						<Link className="nav-link" to={`/item/${item.id}`}>
+							Ver Producto
+						</Link>
+					</button>
 				</div>
 			</div>
 		</div>

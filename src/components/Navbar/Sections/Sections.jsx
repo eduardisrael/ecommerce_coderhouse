@@ -1,17 +1,18 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Sections() {
 	return (
 		<>
 			<li className="nav-item">
-				<a className="nav-link active" aria-current="page" href="#">
+				<Link className="nav-link" to={"/"}>
 					<button className="btn btn-dark">Home</button>
-				</a>
+				</Link>
 			</li>
 			<li className="nav-item">
-				<a className="nav-link" href="#">
-					<button className="btn btn-dark">Abous Us</button>
-				</a>
+				<Link className="nav-link" to={"/contacto"}>
+					<button className="btn btn-dark">Contact</button>
+				</Link>
 			</li>
 		</>
 	);

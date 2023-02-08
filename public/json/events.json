@@ -5,7 +5,9 @@
 		"name": "Lolapalooza",
 		"value": 500,
 		"stock": 3000,
-		"img": "lolapalooza.png"
+		"img": "lolapalooza.png",
+		"brand": "Taquilla Live",
+		"model": "test"
 	},
 	{
 		"id": 2,
@@ -13,6 +15,8 @@
 		"name": "Museo de Cuenca",
 		"value": 120,
 		"stock": 5000,
-		"img": "museum.jpeg"
+		"img": "museum.jpeg",
+		"model": "test",
+		"brand": "Taquilla Live"
 	}
 ]
